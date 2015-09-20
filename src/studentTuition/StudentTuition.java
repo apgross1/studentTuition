@@ -3,7 +3,6 @@ package studentTuition;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import org.apache.poi.ss.formula.functions.FinanceLib;
 
 public class StudentTuition {
 	private double APR;
