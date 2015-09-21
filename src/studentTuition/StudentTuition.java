@@ -3,10 +3,9 @@ package studentTuition;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-
 public class StudentTuition {
 	private double APR;
-	private int tuition;
+	private double tuition;
 	private double perIncr;
 	private int loanTerm;
 	
@@ -30,7 +29,7 @@ public class StudentTuition {
 		this.perIncr = per_incr;
 	}
 
-	public int getTuition() {
+	public double getTuition() {
 		return tuition;
 	}
 
@@ -81,19 +80,18 @@ public class StudentTuition {
 		}
 		catch(InputMismatchException e) {
 			System.out.println("Wrong data type. Please restart and try again.");
+			input.close();
+			return;
 		}
-		input.close();
+		finally {
+			input.close();
+		}
+		
 		
 		double totalTuition = stuTu.tuitionCost();
 		double loanPay = stuTu.loanAmount();
 		System.out.printf("Your total tuition will be $%4.2f.", totalTuition);
 		System.out.printf("\nYou will have to pay $%4.2f a month to pay your loans off in %d years.", loanPay, stuTu.getLoanTerm());
 	}
-
-
-
-
-
-	
 
 }
