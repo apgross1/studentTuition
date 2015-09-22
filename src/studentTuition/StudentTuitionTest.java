@@ -28,6 +28,7 @@ public class StudentTuitionTest {
 
 	@Test
 	public void testTuitionCost() {
+	//JUnit test for TuitionCost() method in main class
 		StudentTuition s = new StudentTuition();
 		s.setTuition(10000);
 		s.setPerIncr(2.5);
@@ -45,6 +46,7 @@ public class StudentTuitionTest {
 
 	@Test
 	public void testLoanAmount() {
+	//JUnit test for LoanAmount() method in main class
 		StudentTuition s = new StudentTuition();
 		s.setTuition(10000);
 		s.setPerIncr(2.5);
